@@ -17,13 +17,15 @@ schema:
 switches:
   - name: ascii_mode
     reset: 0
-    states: [ 中文, 西文 ]
+    states: ["中文", "西文"]
   - name: full_shape
-    states: [ 半角, 全角 ]
+    states: ["半角", "全角"]
   - name: simplification
-    states: [ 漢字, 汉字 ]
+    states: ["漢字", "汉字"]
+  - name: extended_charset
+    states: ["常用", "增廣"]
   - name: ascii_punct
-    states: [ 。，, ．， ]
+    states: ["。，", "．，"]
 
 engine:
   processors:
@@ -55,6 +57,7 @@ speller:
 
 translator:
   dictionary: sancang
+  enable_charset_filter: true
   prism: sancang
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz;'|日月金木水火土竹戈十大中一弓人心手口尸廿山女田止卜片··|"
