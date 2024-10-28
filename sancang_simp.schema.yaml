@@ -50,6 +50,7 @@ engine:
     - reverse_lookup_translator
   filters:
     - uniquifier
+    - "charset_filter@extended_char"
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba

@@ -49,6 +49,7 @@ engine:
     - reverse_lookup_translator
   filters:
     - simplifier
+    - "charset_filter@extended_char"
     - uniquifier
 
 speller:
