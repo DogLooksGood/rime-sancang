@@ -49,12 +49,16 @@ engine:
     - reverse_lookup_translator
   filters:
     - simplifier
-    - "charset_filter@extended_char"
+    - charset_filter@extended_char
     - uniquifier
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba
   delimiter: " ;'"
+
+extended_char:
+  option_name: extended_charset
+  tags: [ abc ]
 
 translator:
   dictionary: sancang
